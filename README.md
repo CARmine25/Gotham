@@ -113,4 +113,32 @@ d.DELETE 	Delete data (Delete)
    2.Use Postman Auth for authoristion
     Postman has an Auth helper that makes authorizing requests even easier!
   how todo it: selection the collection supose here postman library v2,select the auth there and put the input we added in header over here,must save the cahnges,after that for request folder also check the auth.
+
+#VASRIABLES
+1.You can set variables that live at various scopes. Postman will resolve to the value at the nearest and narrowest scope.If a variable with the same name is declared in two different scopes, the value stored in the variable with narrowest scope will be used. For example, if there is a global variable named username and a local variable named username, the local value will be used when the request runs.
+
+  #Scripting in Postman
+
+  Postman allows you to add automation and dynamic behaviors to your collections with scripting.Postman will automatically execute any provided scripts during two events in the request flow:
+
+        Immediately before a request is sent: pre-request script (Pre-request Script of Scripts tab).
+         Immediately after a response comes back: post-response script (Post-response of Scripts tab).
+ #The pm object
+
+Postman has a helper object named pm that gives you access to data about your Postman environment, requests, responses, variables and testing utilities. 
+    FOr example, you can access the JSON response body from an API with:                                                                             pm.response.json()
+                 You can also programmatically get collection variables like the value of baseUrl with:                                              pm.collectionVariables.get(“baseUrl”)
+                 In addition to getting variables, you can also set them with pm.collectionVariables.set("variableName", "variableValue") like this: pm.collectionVariables.set(“myVar”, “foo”)
+
+pm object is run on script of the request(javascript)
   
+  #Setting and getting collection variables
+The pm object allows you to set and get collection variables.
+To set a collection variable, use the .set() method with two parameters: the variable name and the variable value
+pm.collectionVariables.set("variableName", value)
+To get a collection variable use the .get() method and specify the name of the variable you want to retrieve:
+pm.collectionVariables.get("variableName
+
+Local variables
+We can also store local variables inside our scripts using JavaScript. There are two ways to define a variable in JavaScript: using the const or let keywords. const is for variables that won't change value, whereas let allows you to reassign the value later.
+(revisit grab the book id)
