@@ -93,4 +93,24 @@ d.DELETE 	Delete data (Delete)
               #note:  A common error is adding accidental white space in your query or path parameter values.
 
   #Sending data with POST
-  1.
+  1.addition of a book: In this lesson, we will learn how to add a book via POST request with a JSON Body to submit book data to our Postman Library API database
+
+   But what is the Body?
+
+        You will need to send body data with requests whenever you need to add or update structured data. For example, if you're sending a request to add a new customer to a database, you might include the customer details in JSON data format. Typically, you will use body           data with PUT, POST, and PATCH requests.
+        The Body tab in Postman enables you to specify the data you need to send with a request. You can send different types of body data to suit your API.
+        You can use raw body data to send anything you can enter as text. Use the raw tab, and the type dropdown list to indicate the format of your data (Text, JavaScript, JSON, HTML, or XML), and Postman will enable syntax-highlighting and appending the relevant headers           to your request.
+  eg: 1.new request and set the method to post,and body to raw here we will type our body speicific
+      a.Some APIs require Authorization (aka Auth) for certain endpoints in order to permit a request,Some examples are Basic Auth (username and password), OAuth (delegated authorization), and API Keys (secret strings registered to a developer from an API portal)
+      b.Getting an API Key
+           APIs that use API Key auth usually allow developers to sign up in a developer portal, where they will receive a random API Key that can be used to authorize their requests to the API. The API Key allows the API to track who is making calls and how often.  
+            The Postman Library API v2 uses very light protection and does not require you to register for an API Key. You simply have to know it:
+            Header name: api-key
+            Header value: postmanrulzGetting an API Key
+            #APIs that use API Key auth usually allow developers to sign up in a developer portal, where they will receive a random API Key that can be used to authorize their requests to the API. The API Key allows the API to track who is making calls and how often.  
+               Headers: Headers are how we can add metadata about our requests, such as authorization information or specify the data type we want to receive in a response. This is different than the actual payload data we send in the body of a request, such as our new book                 information. #You can think of headers like the outside of an envelope when you send a letter. The envelope has information about delivering the letter, like proof that you've paid for postage. The actual data "payload" is the letter inside the envelope.
+
+   2.Use Postman Auth for authoristion
+    Postman has an Auth helper that makes authorizing requests even easier!
+  how todo it: selection the collection supose here postman library v2,select the auth there and put the input we added in header over here,must save the cahnges,after that for request folder also check the auth.
+  
