@@ -142,3 +142,29 @@ pm.collectionVariables.get("variableName
 Local variables
 We can also store local variables inside our scripts using JavaScript. There are two ways to define a variable in JavaScript: using the const or let keywords. const is for variables that won't change value, whereas let allows you to reassign the value later.
 (revisit grab the book id)
+
+#Make a request to update the book
+
+Hover on your Postman Library API v2 collection, click the three dots, and select Add request. Name your new request "checkout a book"
+
+Set the request method to PATCH
+
+Set the request URL to {{baseUrl}}/books/:id 
+
+Set the value of the path variable id to {{id}}.
+
+This will use the value of our collection variable named id that was set in the Test script of the"add a book" request. You can see the value by hovering on your id variable.
+
+#Task: Delete your book 
+ Hover on your Postman Library API v2 collection, click the three dots, and select "Add request", name your new request "delete a book"
+Set the request method of the "delete a book" request to DELETE 
+Set the request URL to {{baseUrl}}/books/:id
+In the Params tab of the request, make sure the path variable id is set to {{id}}
+Save and Send your reques
+Generating code snippets
+
+Every request you made has a code generation tab you can access from the code </> icon in the far right 
+
+Postman screenshot: Access to code snippet generator from the code icon on the far right
+
+Once the code snippet generator pane is open, you can select from a dropdown to generate the API request in common coding languages like Python, JavaScript, C, NodeJS and more. 
