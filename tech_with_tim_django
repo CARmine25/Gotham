@@ -1,0 +1,21 @@
+>>>>Beginner tutorial in db sqllite3
+
+1.change settings in project folder: to inform django we have to install a new app and it has dependencies
+   new installed app:  'main.apps.MainConfig',
+  python manage.py migrate in cmd:
+1️⃣ Purpose of python manage.py migrate
+In Django, the migrate command is used to:
+Apply database migrations.
+Create the tables and schema in your database that correspond to your Django models.
+Keep the database schema in sync with your code.
+  Essentially, it sets up your database according to your app’s models.Running python manage.py migrate tells Python to execute the manage.py script and apply all pending migrations.
+
+2.setup the model app(main):define the models
+3.we have to upgrade our cmd that new models has been set up: >python manage.py makemigrations main then python manage.py migrate
+
+4.adding objects: a. python manage.py shell 
+        #Why use the shellQuickly test your models and queries.
+        Debug database operations without creating views or forms.
+        Try Django ORM methods like create(), filter(), get(), update(), delete().
+                  b.to check the things in: TODOlist.objects.all() for specific get instead of all
+                  c.
