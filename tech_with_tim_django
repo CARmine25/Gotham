@@ -18,4 +18,21 @@ Keep the database schema in sync with your code.
         Debug database operations without creating views or forms.
         Try Django ORM methods like create(), filter(), get(), update(), delete().
                   b.to check the things in: TODOlist.objects.all() for specific get instead of all
-                  c.
+
+>>>>delete and list of entries in db,querying: 
+    1,filtering query: in this way we can search  if a certain object iis in the quuery
+              t.filter(name__startswith="CARmine")
+               Out[6]: <QuerySet [<TODOlist: CARmine's List>]>
+               In [7]: t.filter(name__startswith="bob")
+               Out[7]: <QuerySet []>
+2.delete object: 
+            In [8]: del_object=t.get(id=1)      #Every Django model automatically gets a primary key field called id (unless you override it).When you created your first TODOlist with
+            In [9]: del_object.delete()         #Django inserted it into the database and gave it the primary key id=1.The next object you create will get id=2, then id=3, and so on.
+            Out[9]: (1, {'main.TODOlist': 1})    #(after 2 create new objcs)
+3.admin dashboard: in cmd
+            1.python manage.py createsuperuser: TO acccess it use/adminn
+             2. to show the db we create (2) it will only be shown when we give access:done in sublime mainn.admin.py
+>>>>>templates:(dynamic html)1.first main url path creation,then in views def the path,create new templates folder in main and add a main folder in it
+         1.tempplate inheritance:
+    
+           
