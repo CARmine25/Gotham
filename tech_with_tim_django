@@ -33,6 +33,22 @@ Keep the database schema in sync with your code.
             1.python manage.py createsuperuser: TO acccess it use/adminn
              2. to show the db we create (2) it will only be shown when we give access:done in sublime mainn.admin.py
 >>>>>templates:(dynamic html)1.first main url path creation,then in views def the path,create new templates folder in main and add a main folder in it
-         1.tempplate inheritance:
-    
+         1.tempplate inheritance:when we open the site it redirects to url.py here in the last line you can see path("",views.home,name="home"),no string meabs direct to home page
+         then it goes to viws.py here it redirects to home.html it redirects to base.py this is where the template is present
+         2.	return render(response,"main/home.html",{}) :base.html is a rigid one we cant customize it for each view
+           so we crteate list.html>>now if we run the site are no changes cause we havent added any item to the list in the shell
+         3.python manage.py shell>> 
+            In [4]: ls=TODOlist.objects.get(id=2)
+            In [5]: ls
+            Out[5]: <TODOlist: first_list>
+            In [6]: ls.item_set.all()
+            Out[6]: <QuerySet []>
+            #shows the item is empty so nnow we create them
+               ls.item_set.create(text="first item",complete=False)
+               Out[9]: <Item: first item>
+               In [10]: ls.item_set.create(text="second item",complete=False)
+               In [11]: ls.item_set.create(text="third item",complete=False)
+               
+            
+      
            
