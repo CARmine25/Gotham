@@ -48,7 +48,21 @@ Keep the database schema in sync with your code.
                Out[9]: <Item: first item>
                In [10]: ls.item_set.create(text="second item",complete=False)
                In [11]: ls.item_set.create(text="third item",complete=False)
+         4.now we will use if statements:in list.htl
+                                          {% extends "main/base.html" %}
+{% block title %}view list{% endblock %}
+
+{% block content %}
+	<h1>{{ls.name}}</h1> <!--here we will passs some variable from views now that is "ls":ls, ls so that we  can add any #variable attached to it -->
+	<ul>
+		{% for item in ls.item_set.all %}       <!-- runninng a for loop #mo need of () in html file this this-->
+			{% for item in ls.item_set.all %}	
+				<li>{{item.text}}</li>
+			{% endif  %}	
+		{% endfor%}                           <!--  #ending for loop-->
+	</ul>
+{% endblock %}
                
             
       
-           
+           5.in shell:
